@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mButton;
     private WebView mWebView;
-    private ProgressBar mProgressBar;
 
     private Messenger mSender;
     private Messenger mReceiver = new Messenger(new Handler() {
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         mButton = (Button) findViewById(R.id.btn);
         mWebView = (WebView) findViewById(R.id.webView);
-        mProgressBar = new ProgressBar(this);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (mButton.getVisibility() == View.GONE){
+        if (mButton.getVisibility() == View.GONE) {
             mButton.setText(getString(R.string.btn_click));
             mButton.setVisibility(View.VISIBLE);
         }
@@ -102,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    private void sendMessage(){
-        if (null != mSender){
+    private void sendMessage() {
+        if (null != mSender) {
             Message msg = Message.obtain();
             msg.replyTo = mReceiver;
             try {
