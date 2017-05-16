@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MessengerTest</string>
+    <string name="btn_click">Click Me to Load</string>
+    <string name="wait_tip">Waiting For Response……</string>
+</resources>
